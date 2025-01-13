@@ -11,5 +11,26 @@ a {
     padding: auto;
 }
 body {
-    background-color: goldenrod;
+    background-color: pink;
+}
+
+header {
+    text-align: center;
+    padding: 10px 0;
+    background-color: r,g,b (245,172,15);
+    color: black;
+}
+main {
+    flex: 1;
+    padding: 20px;
+    background-color: r,g,b (255,242,204);
+    color: black;
+}
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #f4f4f4;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
