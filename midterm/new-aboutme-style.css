@@ -1,0 +1,15 @@
+h1 {
+    color: blue;
+    padding: auto;
+  }
+b {
+    color: yellow;
+    padding: auto;
+}
+a {
+    color: red;
+    padding: auto;
+}
+body {
+    background-color: goldenrod;
+}
