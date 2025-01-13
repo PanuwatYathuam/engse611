@@ -1,0 +1,19 @@
+h1 {
+    color: blue;
+    padding: auto;
+  }
+b {
+    color: yellow;
+    padding: auto;
+}
+a {
+    color: red;
+    padding: auto;
+}
+body {
+    background-color: goldenrod;
+}
+
+header {background-color: rgb(245,172,15);}
+.section {background-color: rgb(255,242,204);}
+.three-columns{background-color: rgb(213,232,212);}
