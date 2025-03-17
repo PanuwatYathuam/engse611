@@ -1,0 +1,38 @@
+img, p, #Profile {
+    display: inline-block; vertical-align: top;
+}
+
+#img1 {
+    width: 350px; height: auto;   
+}
+
+p {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#Profile {
+    position: absolute;
+    right: 0;
+}
+
+#img2 {
+    width: 150px; height: auto;  
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid black;
+}
+
+th {
+    padding: 20px;    
+}
+
+td {
+    padding: 8px;    
+}
