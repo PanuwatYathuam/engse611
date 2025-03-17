@@ -6,8 +6,13 @@ const todoList = document.querySelector("#todo-list");
 let todos = [];
 
 function addTodo() {
-  //console.log("Hello, guys.");
   const todoText = todoInput.value.trim();
+
+  if (todoText.length > 50) {
+    alert("ข้อความต้องไม่เกิน 50 ตัวอักษร");
+    return;
+  }
+
   if (todoText.length > 0) {
     const todo = {
       id: Date.now(),
@@ -16,23 +21,20 @@ function addTodo() {
     };
 
     todos.push(todo);
-
     todoInput.value = "";
-
     renderTodos();
   }
 }
 
 function deleteTodo(id) {
-  //console.log(id);
-  todos = todos.filter((todo) => todo.id !== id);
-  renderTodos();
+  const confirmDelete = confirm("คุณแน่ใจหรือไม่ว่าจะลบงานนี้?");
+  if (confirmDelete) {
+    todos = todos.filter((todo) => todo.id !== id);
+    renderTodos();
+  }
 }
 
 function toggleCompleted(id) {
-  // console.log(id);
-  //let a = 1;
-  //a = a + 1; //a = 2
   todos = todos.map((todo) => {
     if (todo.id === id) {
       todo.completed = !todo.completed;
@@ -50,7 +52,7 @@ function renderTodos() {
     const todoText = document.createElement("span");
     const todoDeleteButton = document.createElement("button");
     const myCheck = document.createElement("INPUT");
-          myCheck.setAttribute("type", "checkbox");
+    myCheck.setAttribute("type", "checkbox");
 
     todoText.textContent = todo.text;
     todoDeleteButton.textContent = "Delete";
@@ -59,13 +61,14 @@ function renderTodos() {
 
     if (todo.completed) {
       todoItem.classList.add("completed");
+      myCheck.checked = true;
     }
 
-    todoItem.addEventListener("click", () => toggleCompleted(todo.id));
-  
+    myCheck.addEventListener("click", () => toggleCompleted(todo.id));
+
+    todoItem.appendChild(myCheck);
     todoItem.appendChild(todoText);
     todoItem.appendChild(todoDeleteButton);
-
 
     todoList.appendChild(todoItem);
   });

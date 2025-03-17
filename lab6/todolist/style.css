@@ -79,5 +79,7 @@ body {
   
   li.completed {
     background-color: #ecf0f1;
+    text-decoration: line-through;
+    color: gray;
   }
   
